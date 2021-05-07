@@ -13,8 +13,8 @@ const Feeling = () => {
     const submitFeeling = () => {
         // dispatch to reducer
         dispatch({
-            type: 'SET_FEELING',
-            payload: feelings
+            type: 'SET_FEEDBACK',
+            payload: {feeling: feelings}
         });
         // on click next => next page
         history.push('/understanding');

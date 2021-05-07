@@ -13,8 +13,8 @@ const Understanding = () => {
     const submit = () => {
         // dispatch to reducer
         dispatch({
-            type: 'SET_UNDERSTANDING',
-            payload: understand
+            type: 'SET_FEEDBACK',
+            payload: {understanding: understand}
         });
         // on click next => next page
         history.push('/support');

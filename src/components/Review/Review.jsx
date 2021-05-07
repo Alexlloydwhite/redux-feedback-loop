@@ -1,6 +1,16 @@
+import {useSelector, useDispatch} from 'react-redux';
+
 const Review = () => {
+    
+    const feedback = useSelector(store => feedbackReducer)
+    
     return (  
-        <h1>Review Goes Here!</h1>
+        <div>
+            <h2>Review Your Feedback</h2>
+            <ul>
+        
+            </ul>
+        </div>
     );
 }
  

@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import Comments from '../Comments/Comments';
@@ -7,6 +6,7 @@ import Feeling from '../Feeling/Feeling';
 import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
 import Home from '../Home/Home';
+import Review from '../Review/Review';
 
 function App() {
 

@@ -9,37 +9,18 @@ import logger from 'redux-logger';
 
 // initial state of the store is EMPTY :)
 const initState = {
-    feeling: '',
-    understanding: '',
-    support: '',
-    comments: ''
+    feedback: {}
 }
 
 // reducer holds state of each component
 // switch statement checks dispatch
 const feedbackReducer = (state = initState, action) => {
     switch (action.type) {
-        case 'SET_FEELING':
+        case 'SET_FEEDBACK':
             return {
                 ...state,
-                feeling: action.payload
+                feedback: action.payload
             }
-        case 'SET_UNDERSTANDING':
-            return {
-                ...state,
-                understanding: action.payload
-            }
-        case 'SET_SUPPORT':
-            return {
-                ...state,
-                support: action.payload
-            }
-        case 'SET_COMMENTS':
-            return {
-                ...state,
-                comments: action.payload
-            }
-        default: state;
     }
     return state;
 }
