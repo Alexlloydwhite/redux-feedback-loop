@@ -13,8 +13,8 @@ const Support = () => {
     const submit = () => {
         // dispatch to reducer
         dispatch({
-            type: 'SET_FEEDBACK',
-            payload: {support: supports}
+            type: 'SET_SUPPORT',
+            payload: supports
         });
         // on click next => next page
         history.push('/comments');
