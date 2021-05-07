@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import {useDispatch} from 'react-redux';
 
 const Understanding = () => {
-    // local state for feelings
+    // local state for understanding
     const [understand, setUnderstand] = useState('');
     // init for dispatch
     const dispatch = useDispatch();
