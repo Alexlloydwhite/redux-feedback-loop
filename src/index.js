@@ -41,8 +41,10 @@ const feedbackReducer = (state = initState, action) => {
             }
         default: state;
     }
+    return state;
 }
 
+// store contains one reducer, logger improves our console log
 const storeInstance = createStore(
     combineReducers({
         feedbackReducer,
