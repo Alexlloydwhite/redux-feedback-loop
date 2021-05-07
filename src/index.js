@@ -9,9 +9,9 @@ import logger from 'redux-logger';
 
 // initial state of the store is EMPTY :)
 const initState = {
-    feeling: 0,
-    understanding: 0,
-    support: 0,
+    feeling: '',
+    understanding: '',
+    support: '',
     comments: ''
 }
 
