@@ -39,6 +39,9 @@ const feedbackReducer = (state = initState, action) => {
                 ...state,
                 comments: action.payload
             }
+        case 'CLEAR_FEEDBACK':
+            return initState;
+
         default: state;
     }
     return state;

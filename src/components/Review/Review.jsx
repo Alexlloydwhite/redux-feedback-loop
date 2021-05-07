@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 const Review = () => {
 
@@ -10,6 +11,15 @@ const Review = () => {
     const history = useHistory();
     const submit = () => {
         setToggled(false);
+    }
+
+    const dispatch = useDispatch();
+
+    const restart = () => {
+        dispatch({
+            type: 'CLEAR_FEEDBACK',
+        })
+        history.push('/')
     }
 
     if (toggled) {
@@ -27,7 +37,7 @@ const Review = () => {
         return (
             <div>
                 <h2>Thank You!</h2>
-                <button onClick={() => history.push('/')}>Submit New Feedback</button>
+                <button onClick={restart}>Submit New Feedback</button>
             </div>
         )
     }
