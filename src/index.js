@@ -21,22 +21,22 @@ const feedbackReducer = (state = initState, action) => {
     switch (action.type) {
         case 'SET_FEELING':
             return {
-                ...store,
+                ...state,
                 feeling: action.payload
             }
         case 'SET_UNDERSTANDING':
             return {
-                ...store,
+                ...state,
                 understanding: action.payload
             }
         case 'SET_SUPPORT':
             return {
-                ...store,
+                ...state,
                 support: action.payload
             }
         case 'SET_COMMENTS':
             return {
-                ...store,
+                ...state,
                 comments: action.payload
             }
         default: state;

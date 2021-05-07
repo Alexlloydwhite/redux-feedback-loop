@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import {useDispatch} from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 const Feeling = () => {
     // local state for feelings
@@ -9,10 +8,12 @@ const Feeling = () => {
     // init for dispatch
     const dispatch = useDispatch();
 
+    const history = useHistory();
+
     const submitFeeling = () => {
         // dispatch to reducer
         dispatch({
-            type: 'ADD_FEELING',
+            type: 'SET_FEELING',
             payload: feelings
         });
         // on click next => next page
@@ -21,7 +22,8 @@ const Feeling = () => {
 
     return (  
         <form onSubmit={submitFeeling}>
-
+            <input onChange={(event) => setFeelings(event.target.value)} type="text" placeholder="Feeling" value={feelings} />
+            <button>Next</button>
         </form>
     );
 }
