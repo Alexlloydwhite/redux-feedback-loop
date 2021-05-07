@@ -22,7 +22,7 @@ const Support = () => {
 
     return (
         <div>
-            <h2>How Well Are You Understanding The Content?</h2>
+            <h2>How well are you being supported?</h2>
             <form onSubmit={submit}>
                 <input onChange={(event) => setSupports(event.target.value)} type="text" placeholder="Support?" value={supports} />
                 <button>Next</button>

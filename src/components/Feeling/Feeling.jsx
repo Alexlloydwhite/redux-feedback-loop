@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import {useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const Feeling = () => {
     // local state for feelings
@@ -20,12 +20,15 @@ const Feeling = () => {
         history.push('/understanding');
     }
 
-    return (  
-        <form onSubmit={submitFeeling}>
-            <input onChange={(event) => setFeelings(event.target.value)} type="text" placeholder="Feeling" value={feelings} />
-            <button>Next</button>
-        </form>
+    return (
+        <div>
+            <h2>How Are You Feeling Today?</h2>
+            <form onSubmit={submitFeeling}>
+                <input onChange={(event) => setFeelings(event.target.value)} type="text" placeholder="Feeling?" value={feelings} />
+                <button>Next</button>
+            </form>
+        </div>
     );
 }
- 
+
 export default Feeling;
