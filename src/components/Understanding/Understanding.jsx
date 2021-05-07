@@ -11,13 +11,18 @@ const Understanding = () => {
     const history = useHistory();
 
     const submit = () => {
-        // dispatch to reducer
-        dispatch({
-            type: 'SET_UNDERSTANDING',
-            payload: understand
-        });
-        // on click next => next page
-        history.push('/support');
+        if (understand !== '') {
+            // dispatch to reducer
+            dispatch({
+                type: 'SET_UNDERSTANDING',
+                payload: understand
+            });
+            // on click next => next page
+            history.push('/support');
+        }
+        if (understand === '') {
+            alert('this field is required')
+        }
     }
 
     return (

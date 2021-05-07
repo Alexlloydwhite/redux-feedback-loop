@@ -11,13 +11,19 @@ const Feeling = () => {
     const history = useHistory();
 
     const submitFeeling = () => {
-        // dispatch to reducer
-        dispatch({
-            type: 'SET_FEELING',
-            payload: feelings
-        });
-        // on click next => next page
-        history.push('/understanding');
+        if (feelings !== '') {
+            // dispatch to reducer
+            dispatch({
+                type: 'SET_FEELING',
+                payload: feelings
+            });
+            // on click next => next page
+            history.push('/understanding');
+        }
+        if (feelings === '') {
+            alert('this field is required')
+        } 
+
     }
 
     return (

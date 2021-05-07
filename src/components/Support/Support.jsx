@@ -11,13 +11,18 @@ const Support = () => {
     const history = useHistory();
 
     const submit = () => {
-        // dispatch to reducer
-        dispatch({
-            type: 'SET_SUPPORT',
-            payload: supports
-        });
-        // on click next => next page
-        history.push('/comments');
+        if (supports !== '') {
+            // dispatch to reducer
+            dispatch({
+                type: 'SET_SUPPORT',
+                payload: supports
+            });
+            // on click next => next page
+            history.push('/comments');
+        }
+        if (supports === '') {
+            alert('this field is required')
+        }
     }
 
     return (

@@ -11,13 +11,13 @@ const Comments = () => {
     const history = useHistory();
 
     const submit = () => {
-        // dispatch to reducer
-        dispatch({
-            type: 'SET_COMMENTS',
-            payload: comment
-        });
-        // on click next => next page
-        history.push('/review');
+            // dispatch to reducer
+            dispatch({
+                type: 'SET_COMMENTS',
+                payload: comment
+            });
+            // on click next => next page
+            history.push('/review');
     }
 
     return (
