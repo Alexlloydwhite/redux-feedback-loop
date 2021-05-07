@@ -17,14 +17,14 @@ const Comments = () => {
             payload: comment
         });
         // on click next => next page
-        history.push('/comments');
+        history.push('/review');
     }
 
     return (
         <div>
-            <h2>How well are you being supported?</h2>
+            <h2>Any comments you want to leave?</h2>
             <form onSubmit={submit}>
-                <input onChange={(event) => setSupports(event.target.value)} type="text" placeholder="Support?" value={supports} />
+                <input onChange={(event) => setComment(event.target.value)} type="text" placeholder="comments" value={comment} />
                 <button>Next</button>
             </form>
         </div>
