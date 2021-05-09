@@ -5,9 +5,10 @@ const pool = require('../modules/pool');
 router.post('/', (req, res) => {
     // assigning req body for reabability 
     const feedback = req.body;
+    console.log(req.body);
     // sql query to send to db
     const sqlText = `INSERT INTO feedback(feeling, understanding, support, comments)
-                        VALUES($1,$2,$2,$4);`;
+                        VALUES($1,$2,$3,$4);`;
     // Sending query to the db
     pool.query(sqlText, [feedback.feeling, feedback.understanding, feedback.support, feedback.comments])
         .then(result => {
